@@ -39,7 +39,7 @@ case 'l':
   break;
 case 'a':
  console.log("A");
-  splat4(color(101,67,33), mouseX, mouseY);
+  splat4(color(random(25,237),random(25,237),random(25,237)), mouseX, mouseY);
   break;
 case 't':
   console.log("T");
@@ -87,16 +87,14 @@ function splat2( k,  lx,  ly){
 }
 //L
 function splat3( k,  lx, ly) {
-  stroke(255,10,25,90);
-  var r = random(10,25);
+  var r = random(10,50);
   var xr = random(-15,15);
   var yr = random(-15,15);
   fill(k);
-  ellipse(lx + xr, ly + yr, r+5,r-5);
+  ellipse(lx + xr, ly + yr, r+xr-yr,r+yr-xr);
 }
 //A
 function splat4( k, lx, ly) {
-  stroke(0,100,0);
   var r = random(10,50);
   var xr = random(-15,15);
   var yr = random(-15,15);
@@ -110,6 +108,8 @@ function splat5( lx, ly) {
   var yr = random(-10,10);
   ellipse(lx + xr, ly + yr, r+xr-yr,r+yr-xr);
   ellipse(ly+yr,lx+xr,r-xr+yr,r+xr-yr);
+  // ellipse(ly-yr,lx-xr,r-xr+yr,r+xr-yr);
+  // ellipse(lx-xr,ly-yr,r-xr+yr,r+xr-yr);
 }
 //E
 function splat6( lx, ly, r) {
@@ -126,8 +126,9 @@ function splat7(  lx, ly) {
   var r = random(10,25);
   var xr = random(-15,15);
   var yr = random(-15,15);
-  fill(253,random(94,201),83,90);
-  ellipse(lx + xr, ly + yr, r,r);
+  fill(0);
+  ellipse(lx + xr, ly + yr, r+xr-yr,r+yr-xr);
+  ellipse(lx+xr,ly+yr,r-xr+yr,r+xr-yr);
 }
 
 1
