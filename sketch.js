@@ -43,31 +43,31 @@ case 'a':
   break;
 case 't':
   console.log("T");
-  splat4(mouseX, mouseY);
+  splat5(mouseX, mouseY);
   break;
 case 'e':
   console.log("E");
-  splat5(mouseX, mouseY);
+  splat6(mouseX, mouseY);
   break;
   case 'r':
   console.log("R");
-  splat6(mouseX, mouseY,30);
+  splat7(mouseX, mouseY,30);
   break;
 default:             // Default executes if the case labels
   console.log("not a good key");   // don't match the switch parameter
   break;
 }
 }
-// function kt
+//S
 function splat1(k, lx,  ly) {
   noStroke();
   var r = random(25,50);
-  var xr = random(-15,15);
-  var yr = random(-15,15);
+  var xr = random(-20,20);
+  var yr = random(-20,20);
   fill(k);
   ellipse(lx + xr, ly + yr, r+xr-yr,r+yr-xr);
   }
-
+//P
 function splat2( k,  lx,  ly){
   noStroke();
   var  r = 0;
@@ -83,8 +83,9 @@ function splat2( k,  lx,  ly){
    yr = random(-25,25);
   }
   fill(k);
-  rect(lx+xr,ly+yr,1.5*(rs+xr-yr),1.5*(r+xr-yr));
+  ellipse(lx+xr,ly+yr,r-xr+yr,r+xr-yr);
 }
+//L
 function splat3( k,  lx, ly) {
   stroke(255,10,25,90);
   var r = random(10,25);
@@ -93,6 +94,7 @@ function splat3( k,  lx, ly) {
   fill(k);
   ellipse(lx + xr, ly + yr, r+5,r-5);
 }
+//A
 function splat4( k, lx, ly) {
   stroke(0,100,0);
   var r = random(25,50);
@@ -101,7 +103,8 @@ function splat4( k, lx, ly) {
   fill(k);
   rect(lx + xr, ly + yr, r-5,r+5);
 }
-function ktWood( k, lx, ly) {
+//T
+function splat5( k, lx, ly) {
   stroke(101,67,33);
   var r = random(10,25);
   var xr = random(-10,10);
@@ -109,7 +112,17 @@ function ktWood( k, lx, ly) {
   fill(k);
   rect(lx + xr, ly + yr, r-5,r+5);
 }
-function ktEmbers(  lx, ly) {
+//E
+function splat6( lx, ly, r) {
+  var r = random(25,50);
+  var xr = random(-50,50);
+  var yr = random(-50,50);
+  noStroke();
+  fill(255);
+  ellipse(lx, ly,r-xr+yr,r+xr-yr);
+}
+//R
+function splat7(  lx, ly) {
   noStroke();
   var r = random(10,25);
   var xr = random(-15,15);
@@ -117,11 +130,7 @@ function ktEmbers(  lx, ly) {
   fill(253,random(94,201),83,90);
   ellipse(lx + xr, ly + yr, r,r);
 }
-function eraser( lx, ly, sz) {
-  noStroke();
-  fill(255);
-  ellipse(lx, ly, sz,sz);
-}
+
 1
 function clear_print() {
 
