@@ -61,7 +61,7 @@ default:             // Default executes if the case labels
 //S
 function splat1(k, lx,  ly) {
   noStroke();
-  var r = random(25,50);
+  var r = random(10,50);
   var xr = random(-20,20);
   var yr = random(-20,20);
   fill(k);
@@ -74,7 +74,7 @@ function splat2( k,  lx,  ly){
   var  xr = 0;
   var  yr = 0;
   if( mouseY<= 400){
-   r = random(25,50);
+   r = random(10,50);
    xr = random(-15,15);
    yr = random(-15,15);
   }else{
@@ -97,20 +97,19 @@ function splat3( k,  lx, ly) {
 //A
 function splat4( k, lx, ly) {
   stroke(0,100,0);
-  var r = random(25,50);
+  var r = random(10,50);
   var xr = random(-15,15);
   var yr = random(-15,15);
   fill(k);
   rect(lx + xr, ly + yr, r-5,r+5);
 }
 //T
-function splat5( k, lx, ly) {
-  stroke(101,67,33);
-  var r = random(10,25);
+function splat5( lx, ly) {
+  var r = random(10,50);
   var xr = random(-10,10);
   var yr = random(-10,10);
-  fill(k);
-  rect(lx + xr, ly + yr, r-5,r+5);
+  ellipse(lx + xr, ly + yr, r+xr-yr,r+yr-xr);
+  ellipse(ly+yr,lx+xr,r-xr+yr,r+xr-yr);
 }
 //E
 function splat6( lx, ly, r) {
