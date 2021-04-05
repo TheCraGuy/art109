@@ -27,19 +27,19 @@ switch(currentkey) {
 
 case 's':
   console.log("S");
-  splat1(color(34,139,34), mouseX, mouseY);
+  splat1(color(214, 24, 11), mouseX, mouseY);
   break;
 case 'p':
   console.log("P");
-  splat2(color(255,10,25),mouseX, mouseY);
+  splat2(color(10, 24, 209),mouseX, mouseY);
   break;
 case 'l':
   console.log("L");
-  splat3(color(255,10,25),mouseX, mouseY);
+  splat3(color(237, 230, 21),mouseX, mouseY);
   break;
 case 'a':
  console.log("A");
-  splat4(color(101,67,33,), mouseX, mouseY);
+  splat4(color(101,67,33), mouseX, mouseY);
   break;
 case 't':
   console.log("T");
@@ -83,7 +83,7 @@ function splat2( k,  lx,  ly){
    yr = random(-25,25);
   }
   fill(k);
-  rect(lx+xr,ly+yr,r/2,2*r);
+  rect(lx+xr,ly+yr,1.5*(rs+xr-yr),1.5*(r+xr-yr));
 }
 function splat3( k,  lx, ly) {
   stroke(255,10,25,90);
