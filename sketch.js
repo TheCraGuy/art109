@@ -87,6 +87,7 @@ function splat2( k,  lx,  ly){
 }
 //L
 function splat3( k,  lx, ly) {
+  noStroke();
   var r = random(10,50);
   var xr = random(-15,15);
   var yr = random(-15,15);
@@ -95,14 +96,17 @@ function splat3( k,  lx, ly) {
 }
 //A
 function splat4( k, lx, ly) {
+  noStroke();
   var r = random(10,50);
   var xr = random(-15,15);
   var yr = random(-15,15);
   fill(k);
-  rect(lx + xr, ly + yr, r-5,r+5);
+  rect(lx+xr,ly+yr,r-xr+yr,r+xr-yr);
+  rect(lx+yr,ly+xr,r-xr+yr,r+xr-yr);
 }
 //T
 function splat5( lx, ly) {
+  noStroke();
   var r = random(10,50);
   var xr = random(-10,10);
   var yr = random(-10,10);
@@ -113,6 +117,7 @@ function splat5( lx, ly) {
 }
 //E
 function splat6( lx, ly, r) {
+  noStroke();
   var r = random(25,50);
   var xr = random(-50,50);
   var yr = random(-50,50);
