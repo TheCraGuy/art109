@@ -26,32 +26,32 @@ function drawChoice() {
 switch(currentkey) {
 
 case 's':
-  console.log("");
-  splat1(color(34,139,34,75), mouseX, mouseY);
+  console.log("S");
+  splat1(color(34,139,34), mouseX, mouseY);
   break;
 case 'p':
   console.log("P");
-  ktPetals(color(255,10,25,75),mouseX, mouseY);
+  splat2(color(255,10,25),mouseX, mouseY);
   break;
 case 'l':
   console.log("L");
-  ktWater(color(10,75,75+(mouseY/4),(mouseY/4))-50,mouseX,mouseY);
+  splat3(color(255,10,25),mouseX, mouseY);
   break;
 case 'a':
  console.log("A");
-  ktWood(color(101,67,33,75), mouseX, mouseY);
+  splat4(color(101,67,33,), mouseX, mouseY);
   break;
 case 't':
   console.log("T");
-  ktEmbers(mouseX, mouseY);
+  splat4(mouseX, mouseY);
   break;
-case 'r':
-  console.log("drip");
-  ktDrip(mouseX, mouseY);
+case 'e':
+  console.log("E");
+  splat5(mouseX, mouseY);
   break;
-  case 'e':
-  console.log("eraser");
-  eraser(mouseX, mouseY,30);
+  case 'r':
+  console.log("R");
+  splat6(mouseX, mouseY,30);
   break;
 default:             // Default executes if the case labels
   console.log("not a good key");   // don't match the switch parameter
@@ -59,16 +59,16 @@ default:             // Default executes if the case labels
 }
 }
 // function kt
-function ktDrip( lx,  ly) {
+function splat1(k, lx,  ly) {
   noStroke();
-  var  r = random(2,5);
-
-  for (var i = 0; i <5 ; i++) {
-    fill(0,100-4*i);
-    ellipse(lx,ly+i,r,r);
+  var r = random(25,50);
+  var xr = random(-15,15);
+  var yr = random(-15,15);
+  fill(k);
+  ellipse(lx + xr, ly + yr, r+xr-yr,r+yr-xr);
   }
-}
-function ktWater( k,  lx,  ly){
+
+function splat2( k,  lx,  ly){
   noStroke();
   var  r = 0;
   var  xr = 0;
@@ -85,7 +85,7 @@ function ktWater( k,  lx,  ly){
   fill(k);
   rect(lx+xr,ly+yr,r/2,2*r);
 }
-function ktPetals( k,  lx, ly) {
+function splat3( k,  lx, ly) {
   stroke(255,10,25,90);
   var r = random(10,25);
   var xr = random(-15,15);
@@ -93,7 +93,7 @@ function ktPetals( k,  lx, ly) {
   fill(k);
   ellipse(lx + xr, ly + yr, r+5,r-5);
 }
-function splat1( k, lx, ly) {
+function splat4( k, lx, ly) {
   stroke(0,100,0);
   var r = random(25,50);
   var xr = random(-15,15);
@@ -119,7 +119,7 @@ function ktEmbers(  lx, ly) {
 }
 function eraser( lx, ly, sz) {
   noStroke();
-  fill(255,50);
+  fill(255);
   ellipse(lx, ly, sz,sz);
 }
 1
